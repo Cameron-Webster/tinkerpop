@@ -208,6 +208,8 @@ const gremlins = {
     g_V_hasXname_not_startingWithXmarXX: [function({g}) { return g.V().has("name",TextP.notStartingWith("mar")) }], 
     g_V_hasXname_not_endingWithXasXX: [function({g}) { return g.V().has("name",TextP.notEndingWith("as")) }], 
     g_V_hasXp_neqXvXX: [function({g}) { return g.V().has("p",P.neq("v")) }], 
+    g_V_hasXage_gtX18X_andXltX30XXorXgtx35XXX: [function({g}) { return g.V().has("age",P.gt(18).and(P.lt(30)).or(P.gt(35))) }], 
+    g_V_hasXage_gtX18X_andXltX30XXorXltx35XXX: [function({g}) { return g.V().has("age",P.gt(18).and(P.lt(30)).and(P.lt(35))) }], 
     g_V_valuesXageX_isX32X: [function({g}) { return g.V().values("age").is(32) }], 
     g_V_valuesXageX_isXlte_30X: [function({g}) { return g.V().values("age").is(P.lte(30)) }], 
     g_V_valuesXageX_isXgte_29X_isXlt_34X: [function({g}) { return g.V().values("age").is(P.gte(29)).is(P.lt(34)) }], 
