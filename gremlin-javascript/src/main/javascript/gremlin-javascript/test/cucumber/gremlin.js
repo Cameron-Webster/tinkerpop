@@ -355,6 +355,7 @@ const gremlins = {
     g_VX1X_mapXnameX: [function({g, l1, vid1}) { return g.V(vid1).map(l1) }], 
     g_VX1X_outE_label_mapXlengthX: [function({g, l1, vid1}) { return g.V(vid1).outE().label().map(l1) }], 
     g_VX1X_out_mapXnameX_mapXlengthX: [function({g, l1, l2, vid1}) { return g.V(vid1).out().map(l1).map(l2) }], 
+    g_VX1X_out_mapXlambdaXnameXX_mapXlambdaXlengthXX: [function({g, vid1}) { return g.V(vid1).out().map(() => "it.get().value(\'name\')").map(() => "it.get().toString().length()") }], 
     g_withPath_V_asXaX_out_mapXa_nameX: [function({g, l1}) { return g.withPath().V().as("a").out().map(l1) }], 
     g_withPath_V_asXaX_out_out_mapXa_name_it_nameX: [function({g, l1}) { return g.withPath().V().as("a").out().out().map(l1) }], 
     g_V_mapXselectXaXX: [function({g}) { return g.V().as("a").map(__.select("a")) }], 

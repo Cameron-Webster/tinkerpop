@@ -340,6 +340,7 @@ world.gremlins = {
     'g_VX1X_mapXnameX': [(lambda g, l1=None,vid1=None:g.V(vid1).map(l1))], 
     'g_VX1X_outE_label_mapXlengthX': [(lambda g, l1=None,vid1=None:g.V(vid1).outE().label().map(l1))], 
     'g_VX1X_out_mapXnameX_mapXlengthX': [(lambda g, l1=None,l2=None,vid1=None:g.V(vid1).out().map(l1).map(l2))], 
+    'g_VX1X_out_mapXlambdaXnameXX_mapXlambdaXlengthXX': [(lambda g, vid1=None:g.V(vid1).out().map(lambda: "it.get().value('name')").map(lambda: "it.get().toString().length()"))], 
     'g_withPath_V_asXaX_out_mapXa_nameX': [(lambda g, l1=None:g.withPath().V().as_('a').out().map(l1))], 
     'g_withPath_V_asXaX_out_out_mapXa_name_it_nameX': [(lambda g, l1=None:g.withPath().V().as_('a').out().out().map(l1))], 
     'g_V_mapXselectXaXX': [(lambda g:g.V().as_('a').map(__.select('a')))], 
